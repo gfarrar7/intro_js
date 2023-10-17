@@ -1,0 +1,57 @@
+@font-face {
+    font-family: "WesternBangBang";
+    src: url(./fonts/WesternBangBang-Regular.ttf),
+         url(./fonts/WesternBangBang-Regular.woff);
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    font-family: 'WesternBangBang', sans-serif;
+}
+
+
+.header {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./img/background.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    font-family: 'WesternBangBang', sans-serif;
+}
+
+.header-content {
+    padding: 4%;
+    border-radius: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vi;
+}
+
+h1 {
+    font-size: 7vi;
+    text-wrap: nowrap;
+    text-align: center;
+    padding: 4%;
+    border-radius: 20px;
+    color: rgb(44, 23, 10);
+    background-color: rgba(205, 189, 171, 0.65);
+}
+
+.play {
+    font-size: 3vi;
+    text-wrap: nowrap;
+    text-align: center;
+    padding: 2%;
+    border-radius: 20px;
+    color: rgba(243, 235, 225, 0.845);
+    background-color: rgb(61, 26, 5);
+}

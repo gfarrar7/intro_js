@@ -12,7 +12,7 @@
 }
 
 
-.header {
+.start-screen {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -26,7 +26,7 @@
     font-family: 'WesternBangBang', sans-serif;
 }
 
-.header-content {
+.start-screen-content {
     padding: 4%;
     border-radius: 70px;
     display: flex;
@@ -46,7 +46,7 @@ h1 {
     background-color: rgba(205, 189, 171, 0.65);
 }
 
-.play {
+#play {
     font-size: 3vi;
     text-wrap: nowrap;
     text-align: center;

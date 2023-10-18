@@ -18,6 +18,16 @@
 
 /*First score count to 5 wins game*/
 
-<!--If player wins, display pop up stating 'Congratulations, you are the fastest gun slinger in the West!' and a play again button-->
+/*If player wins, display pop up stating 'Congratulations, you are the fastest gun slinger in the West!' and a play again button*/
 
-<!--If computer wins, display pop up stating 'Ouch! Better luck next time cowboy' and a play again button-->
+/*If computer wins, display pop up stating 'Ouch! Better luck next time cowboy' and a play again button*/
+
+function playGame() {
+    let startDiv = document.getElementById("start");
+    let chooseWeapons = document.getElementById("choose-weapons");
+    let gameOver = document.getElementById("game-over");
+    startDiv.style.display = "none";
+    chooseWeapons.style.display = "block";
+    gameOver.style.display = "none";
+}
+

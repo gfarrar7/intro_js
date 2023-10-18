@@ -23,6 +23,25 @@
 /*If computer wins, display pop up stating 'Ouch! Better luck next time cowboy' and a play again button*/
 
 function playGame() {
+    this.toggleScreen("start", false)
+    this.toggleScreen("game-container", true);
+    let startDiv = document.getElementById("start");
+    let gameContainer = document.getElementById("game-container");
+    let gameOver = document.getElementById("game-over");
+    startDiv.style.display = "none";
+    gameContainer.style.display = "block";
+    gameOver.style.display = "none";
+}
+
+function toggleScreen(id, toggle) {
+    let element = document.getElementById(id);
+    let display = (toggle) ? 'block' : 'none' ;
+    element.style.display = display;
+}
+
+/*function playGame() {
+    this.toggleScreen("start", false)
+    this.toggleScreen("game", true);
     let startDiv = document.getElementById("start");
     let chooseWeapons = document.getElementById("choose-weapons");
     let gameOver = document.getElementById("game-over");
@@ -31,3 +50,8 @@ function playGame() {
     gameOver.style.display = "none";
 }
 
+function toggleScreen(id, toggle) {
+    let element = document.getElementById(id);
+    let display = (toggle) ? 'block' : 'none' ;
+    element.style.display = display;
+}*/

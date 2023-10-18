@@ -22,22 +22,30 @@
 
     <!--Once play is pressed, pop up fades and a score count for player and computer/enemy is displayed, along with a title saying 'Choose your weapon' and the 3 options-->
 
-    <section id="choose-weapons">
-        <div class="weapons">
-            <button class="scissors">
-                <img class="weapon-img" src="./img/scissors.png" alt="Drawing of a pair of scissors" width="250px" height="200px">
-                <p class="weapon-name">SCISSORS</p>
-            </button>
-            <button class="paper">
-                <img class="weapon-img" src="./img/paper.png" alt="Drawing of a piece of paper" width="250px" height="200px">
-                <p class="weapon-name">PAPER</p>
-            </button>
-            <button class="rock">
-                <img class="weapon-img" src="./img/rock.png" alt="Drawing of a large boulder" width="250px" height="200px">
-                <p class="weapon-name">ROCK</p>
-            </button>
+    <section id="game-container" style="display: none;">
+        <div id="game">
+            <div class="choose-weapons">
+                <div class="weapons">
+                    <button class="scissors">
+                        <img class="weapon-img" src="./img/scissors.png" alt="Drawing of a pair of scissors" width="350px" height="300px">
+                        <p class="weapon-name">SCISSORS</p>
+                    </button>
+                    <button class="paper">
+                        <img class="weapon-img" src="./img/paper.png" alt="Drawing of a piece of paper" width="350px" height="300px">
+                        <p class="weapon-name">PAPER</p>
+                    </button>
+                    <button class="rock">
+                        <img class="weapon-img" src="./img/rock.png" alt="Drawing of a large boulder" width="350px" height="300px">
+                        <p class="weapon-name">ROCK</p>
+                    </button>
+                </div>
+                <h2>CHOOSE YOUR WEAPON</h2>
+            </div>
+            <section class="scores">
+                <div class="playerScore">YOUR HITS</div>
+                <div class="computerScore">ENEMY's HITS</div>
+            </section>
         </div>
-        <h2>choose your weapons</h2>
     </section>
 
     <!--Create 3 functions; one for if scissors beats paper, one for if paper beats rock, one for if rock beats scissors-->
@@ -50,11 +58,6 @@
 
     <!--If computer wins, display the alternative background image and a pop up saying 'Critical Hit', then add a score to computer's score count-->
 
-    <!--<section class="scores">
-        <div class="playerScore"></div>
-        <div class="computerScore"></div>
-    </section>-->
-
     <!--Once selection has been played, return to home screen and again ask player to choose weapon-->
 
     <!--First score count to 5 wins game-->
@@ -63,7 +66,7 @@
 
     <!--If computer wins, display pop up stating 'Ouch! Better luck next time cowboy' and a play again button-->
 
-    <section id="game-over">
+    <section id="game-over" style="display: none;">
         <h1>GAME OOVER</h1>
         <button class="play" onclick="playGame()">PLAY AGAIN</button>
     </section>

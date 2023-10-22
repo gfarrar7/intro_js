@@ -140,7 +140,20 @@ button:active {
 }
 
 .scores {
+    width: 30vw;
     display: flex;
+    justify-content: space-between;
+}
+
+.player-score,
+.computer-score {
+    font-size: 1.5vi;
+    text-wrap: nowrap;
+    text-align: center;
+    padding: 3%;
+    border-radius: 20px;
+    color: rgba(243, 235, 225, 0.845);
+    background-color: rgb(61, 26, 5);
 }
 
 /* Game Over Screen - Third Section */

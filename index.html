@@ -23,6 +23,7 @@
     <!--Once play is pressed, pop up fades and a score count for player and computer/enemy is displayed, along with a title saying 'Choose your weapon' and the 3 options-->
 
     <section id="game-container" style="display: none;">
+
         <div id="game">
             <div class="choose-weapons">
                 <div class="weapons">
@@ -38,12 +39,16 @@
                         <img class="weapon-img" src="./img/rock.png" alt="Drawing of a large boulder" width="350px" height="300px">
                         <p class="weapon-name">ROCK</p>
                     </button>
-                </div>
-                <h2>CHOOSE YOUR WEAPON</h2>
             </div>
+
+                <h2 class="game-info">CHOOSE YOUR WEAPON</h2>
+                <h3 class="outcome">FIRST TO SCORE 5 SHOTS WINS</h3>
+
+        </div>
+
             <section class="scores">
-                <div class="player-score">YOUR HITS</div>
-                <div class="computer-score">ENEMY'S HITS</div>
+                    <p class="player-score">YOUR HITS: 0</p>
+                    <p class="computer-score">ENEMY'S HITS: 0</p>  
             </section>
         </div>
     </section>

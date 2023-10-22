@@ -92,11 +92,23 @@ h2 {
     font-size: 4vi;
     text-wrap: nowrap;
     text-align: center;
-    padding: 4%;
-    margin: 4%;
+    padding: 3%;
+    margin: 2%;
+    margin-bottom: 5%;
     border-radius: 20px;
     color: rgb(44, 23, 10);
     background-color: rgba(205, 189, 171, 0.65);
+}
+
+h3 {
+    font-size: 2vi;
+    text-wrap: nowrap;
+    text-align: center;
+    padding: 2%;
+    margin-bottom: 2%;
+    border-radius: 20px;
+    color: rgb(44, 23, 10);
+    background-color: rgba(203, 165, 91, 0.794);
 }
 
 .weapons {
@@ -126,7 +138,7 @@ button {
 }
 
 button:hover {
-    background-color: rgba(255, 255, 255, 0.59)
+    background-color: rgba(203, 165, 91, 0.794);
 }
 
 button:active {

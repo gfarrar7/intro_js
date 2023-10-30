@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STICK 'EM PARTNER</title>
     <link rel="stylesheet" href="style.css">
-    <script src="./index.js"></script>
 </head>
 
 <body>
@@ -44,7 +43,7 @@
                 <h2 class="game-info">CHOOSE YOUR WEAPON</h2>
                 <h3 class="outcome">FIRST TO SCORE 5 SHOTS WINS</h3>
 
-        </div>
+            </div>
 
             <section class="scores">
                     <p class="player-score">YOUR HITS: 0</p>
@@ -52,6 +51,20 @@
             </section>
         </div>
     </section>
+
+    <footer class="footer"></footer>
+    
+    <div class="modal" id="endgameModal1">
+        <p class="endgameMsg" id="endgameMsg1"></p>
+        <button class="btn-restart" onclick="restartGame()">PLAY AGAIN</button>
+    </div>
+    <div class="overlay" id="overlay1"></div>
+
+    <div class="modal" id="endgameModal2">
+        <p class="endgameMsg" id="endgameMsg2"></p>
+        <button class="btn-restart" onclick="restartGame()">PLAY AGAIN</button>
+    </div>
+    <div class="overlay" id="overlay2"></div>
 
     <!--Create 3 functions; one for if scissors beats paper, one for if paper beats rock, one for if rock beats scissors-->
 
@@ -71,12 +84,12 @@
 
     <!--If computer wins, display pop up stating 'Ouch! Better luck next time cowboy' and a play again button-->
 
-    <section id="game-over" style="display: none;">
+    <!--<section id="game-over" style="display: none;">
         <h1>GAME OOVER</h1>
         <button class="play" onclick="playGame()">PLAY AGAIN</button>
-    </section>
+    </section>-->
 
-   
+    <script src="./index.js"></script>
 
 </body>
 </html>

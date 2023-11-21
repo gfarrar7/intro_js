@@ -131,4 +131,17 @@ h3 {
     background-image: url(img/palette.png);
     border: #ffffff;
   }
+
+  .sliders {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 150%;
+    color: #e5ac5b;
+  }
+
+  #size-text {
+    margin-left: 32%;
+    margin-top: 2%;
+  }
   

@@ -77,6 +77,19 @@ colorInput.oninput = (e) => setCurrentColor(e.target.value);
 
 
 // Create size slider. Icons to be paint brushes //
+const sizeText = document.querySelector("#size-text");
+const sizeInput = document.querySelector("#size-range");
+sizeInput.oninput = (e) => changeSize(e.target.value);
+
+function changeSize(value) {
+    setCurrentSize(value)
+    updateSizeText(value)
+    reloadGrid()
+  }
+  
+  function updateSizeText(value) {
+    sizeText.innerHTML = `${value} x ${value}`
+  }
 
 // Create transparency slider. Icons to be a paint palettes //
 

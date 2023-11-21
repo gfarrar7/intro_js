@@ -88,7 +88,7 @@ function changeSize(value) {
   }
   
   function updateSizeText(value) {
-    sizeText.innerHTML = `${value} x ${value}`
+    sizeText.innerHTML = `size: ${value} x ${value}`
   }
 
 // Create transparency slider. Icons to be a paint palettes //

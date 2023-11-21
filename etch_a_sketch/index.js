@@ -11,7 +11,7 @@ function setCurrentColor(newColor) {
     currentColor = newColor;
 }
 
-function setCurrentMocde(newMode) {
+function setCurrentMode(newMode) {
     currentMode = newMode;
 }
 
@@ -49,7 +49,7 @@ function changeColor(e) {
     else {
         if (e.type === "mouseover" && mouseDown || e.type === "click") {
             switch (currentMode) {
-                case "rainbow":
+                case "random":
                     const randomR = Math.floor(Math.random() * 256);
                     const randomG = Math.floor(Math.random() * 256);
                     const randomB = Math.floor(Math.random() * 256);
@@ -59,7 +59,7 @@ function changeColor(e) {
                     e.target.style.backgroundColor = currentColor;
                     break;
                 case "eraser":
-                    e.target.style.backgroundColor = '#fefefe';
+                    e.target.style.backgroundColor = '#ffedca';
                     break;
                 default:
                     return;
@@ -69,19 +69,38 @@ function changeColor(e) {
 }
 
 // Create colour button. Icon to be a paint palette //
-const paletteBtn = document.querySelector("#palette-btn");
+const colorBtn = document.querySelector("#color-btn");
+colorBtn.onclick = () => setCurrentMode("color");
 
-paletteBtn.addEventListener("click", (e) => {
-    let colorInput = document.createElement("input");
-    colorInput.setAttribute(type, "color");
-    return colorInput;
-});
+const colorInput = document.querySelector("#color-input");
+colorInput.oninput = (e) => setCurrentColor(e.target.value);
+
 
 // Create size slider. Icons to be paint brushes //
 
 // Create transparency slider. Icons to be a paint palettes //
 
 // Create eraser button. Icon to be an eraser //
+const eraserBtn = document.querySelector("#eraser-btn");
+eraserBtn.onclick = () => setCurrentMode("eraser");
+
+function activateButton(newMode) {
+    if (currentMode === 'random') {
+      randomBtn.classList.remove('active')
+    } else if (currentMode === 'color') {
+      colorBtn.classList.remove('active')
+    } else if (currentMode === 'eraser') {
+      eraserBtn.classList.remove('active')
+    }
+  
+    if (newMode === 'random') {
+      randomBtn.classList.add('active')
+    } else if (newMode === 'color') {
+      colorBtn.classList.add('active')
+    } else if (newMode === 'eraser') {
+      eraserBtn.classList.add('active')
+    }
+  }
 
 // Create clear canvas button. Icon to be cleaning supplies // 
 function clearGrid() {
@@ -97,5 +116,7 @@ const clearBtn = document.querySelector("#clear-btn");
 clearBtn.addEventListener("click", (e) => reloadGrid());
 
 // Create randomise colour button. Icon to be a question mark //
+const randomBtn = document.querySelector("#random-btn");
+randomBtn.onclick = () => setCurrentMode("random");
 
 // Footer //

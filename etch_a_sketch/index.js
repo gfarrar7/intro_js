@@ -1,7 +1,7 @@
 // Default settings //
-const defaultColor = "black";
+const defaultColor = "#e5ac5b";
 const defaultMode = "color";
-const defaultSize = 50;
+const defaultSize = 25;
 
 let currentColor = defaultColor;
 let currentMode = defaultMode;
@@ -19,13 +19,12 @@ function setCurrentSize(newSize) {
     currentSize = newSize;
 }
 
+let mouseDown = false
+document.body.onmousedown = () => (mouseDown = true)
+document.body.onmouseup = () => (mouseDown = false)
 
 // Create container for grid and create grid //
-const gridContainer = document.querySelector("#grid_container");
-
-
-
-//cell.textContent = "select size: " cell + " x " + cell;//
+const gridContainer = document.querySelector("#grid-container");
 
 function createGrid(cell) {
     for (let i = 0; i < cell * cell; i++) {
@@ -35,32 +34,48 @@ function createGrid(cell) {
             gridContainer.style.gridTemplateRows = `repeat(${cell}, 1fr)`;
             gridCell.addEventListener("mouseover", changeColor);
             gridCell.addEventListener("mousedown", changeColor);
+            gridCell.addEventListener("click", changeColor);
             gridContainer.appendChild(gridCell);
         }
     }
 
-createGrid(16);
+createGrid(25);
+
+//cell.textContent = "select size: " cell + " x " + cell;//
+
 
 function changeColor(e) {
-    if (e.type === 'mouseover' && !mouseDown) return;
-    if (currentMode === 'rainbow') {
-      const randomR = Math.floor(Math.random() * 256);
-      const randomG = Math.floor(Math.random() * 256);
-      const randomB = Math.floor(Math.random() * 256);
-      e.target.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`;
-    } else if (currentMode === 'color') {
-      e.target.style.backgroundColor = currentColor
-    } else if (currentMode === 'eraser') {
-      e.target.style.backgroundColor = '#fefefe'
+    if (e.type === "mouseover" && !mouseDown) return;
+    else {
+        if (e.type === "mouseover" && mouseDown || e.type === "click") {
+            switch (currentMode) {
+                case "rainbow":
+                    const randomR = Math.floor(Math.random() * 256);
+                    const randomG = Math.floor(Math.random() * 256);
+                    const randomB = Math.floor(Math.random() * 256);
+                    e.target.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`;
+                    break;
+                case "color":
+                    e.target.style.backgroundColor = currentColor;
+                    break;
+                case "eraser":
+                    e.target.style.backgroundColor = '#fefefe';
+                    break;
+                default:
+                    return;
+            }
+        }
     }
-  }
+}
 
 // Create colour button. Icon to be a paint palette //
 const paletteBtn = document.querySelector("#palette-btn");
 
-function chooseColor(e) {
-    if (e.type === 'mouseover' && !mouseDown)
-}
+paletteBtn.addEventListener("click", (e) => {
+    let colorInput = document.createElement("input");
+    colorInput.setAttribute(type, "color");
+    return colorInput;
+});
 
 // Create size slider. Icons to be paint brushes //
 
@@ -68,7 +83,18 @@ function chooseColor(e) {
 
 // Create eraser button. Icon to be an eraser //
 
-// Create clear canvas button. Icon to be cleaning supplies //   
+// Create clear canvas button. Icon to be cleaning supplies // 
+function clearGrid() {
+    gridContainer.innerHTML = " ";
+}
+
+function reloadGrid() {
+    clearGrid();
+    createGrid(currentSize);
+}
+
+const clearBtn = document.querySelector("#clear-btn");
+clearBtn.addEventListener("click", (e) => reloadGrid());
 
 // Create randomise colour button. Icon to be a question mark //
 

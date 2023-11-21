@@ -126,7 +126,9 @@ h3 {
   input::-webkit-color-swatch {
     border-radius: 7px;
     background-image: url(img/palette.png);
-    border: #ffffff;
+    border: 3px #ffffff;
+    outline-style: solid;
+    outline-color: #ffffff;
   }
 
   .sliders {
@@ -138,14 +140,8 @@ h3 {
     color: #e5ac5b;
   }
 
-  #size-text {
+  #size-text, #trans-text {
     margin-left: 22%;
     margin-top: 2%;
   }
-
-  #trans-text {
-    margin-left: 15%;
-    margin-top: 2%;
-  }
-
   

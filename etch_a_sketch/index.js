@@ -49,14 +49,14 @@ function changeColor(e) {
     else {
         if (e.type === "mouseover" && mouseDown || e.type === "click") {
             switch (currentMode) {
+                case "color":
+                    e.target.style.backgroundColor = currentColor;
+                    break;
                 case "random":
                     const randomR = Math.floor(Math.random() * 256);
                     const randomG = Math.floor(Math.random() * 256);
                     const randomB = Math.floor(Math.random() * 256);
                     e.target.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`;
-                    break;
-                case "color":
-                    e.target.style.backgroundColor = currentColor;
                     break;
                 case "eraser":
                     e.target.style.backgroundColor = '#ffedca';
@@ -92,26 +92,25 @@ function changeSize(value) {
   }
 
 // Create transparency slider. Icons to be a paint palettes //
-
 // Create eraser button. Icon to be an eraser //
 const eraserBtn = document.querySelector("#eraser-btn");
 eraserBtn.onclick = () => setCurrentMode("eraser");
 
 function activateButton(newMode) {
-    if (currentMode === 'random') {
-      randomBtn.classList.remove('active')
-    } else if (currentMode === 'color') {
-      colorBtn.classList.remove('active')
+    if (currentMode === 'color') {
+        colorBtn.classList.remove('active');
+    } else if (currentMode === 'random') {
+        randomBtn.classList.remove('active');
     } else if (currentMode === 'eraser') {
-      eraserBtn.classList.remove('active')
+      eraserBtn.classList.remove('active');
     }
   
-    if (newMode === 'random') {
-      randomBtn.classList.add('active')
-    } else if (newMode === 'color') {
-      colorBtn.classList.add('active')
+    if (newMode === 'color') {
+        colorBtn.classList.add('active');
+    } else if (newMode === 'random') {
+        randomBtn.classList.add('active');
     } else if (newMode === 'eraser') {
-      eraserBtn.classList.add('active')
+      eraserBtn.classList.add('active');
     }
   }
 

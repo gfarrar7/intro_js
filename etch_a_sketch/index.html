@@ -11,28 +11,78 @@
 </head>
 
 <body>
-    
+
     <!-- Create screen container. Background to be an easel -->
+    <div id="easel">
 
-    <!-- Title -->
+         <!-- Title -->
+        <h1>Etch-a-Sketch</h1>
 
-    <!-- Create container for grid and create grid -->
+        <div id="game">
 
-    <!-- Create colour button. Icon to be a paint palette -->
+            <div id="menu_container1">
 
-    <!-- Create size slider. Icons to be paint brushes -->
+                <!-- Create colour button. Icon to be a paint palette -->
+                <button class="btn" id="palette_btn">
+                    <img src="./img/palette.png" alt="A cartoon style image of a wooden paint palette, with splotches of blue, green, yellow, red and purple paint on it" width="50vw" height="50vh">
+                    <h3>colour</h3>
+                </button>
 
-    <!-- Create transparency slider. Icons to be a paint palettes -->
+                <!-- Create randomise colour button. Icon to be a question mark-->
+                <button class="btn" id="random_btn">
+                    <img src="./img/question_mark.png" alt="A cartoon style image of a rainbow gradiented circle with a white question mark in the middle" width="50vw" height="50vh">
+                    <h3>randomise</h3>
+                </button>
 
-    <!-- Create eraser button. Icon to be an eraser -->
+                <!-- Create transparency slider. Icons to be a paint palettes -->
+                <div class="sliders" id="trans_container">
+                    <div class="slider_container">
+                        <img id="palette1" src="img/palette.png" width="30px">
+                        <input type="range" min="RGB(-0.1, 0.0, 0.0)" max="RGB(0.1, 0.0, 0.0)" value="RGB(0.0, 0.0, 0.0)" id="transRange" class="slider">
+                        <img id="palette2" src="img/palette.png" width="30px">
+                    </div>
+                    <p class="slider_text" id="trans_text"></p>
+                </div>
 
-    <!-- Create clear canvas button. Icon to be cleaning supplies -->     
+            </div>
 
-    <!-- Create randomise colour button. Icon to be a question mark-->
 
-    <!-- Footer -->
+            <!-- Create container for grid and create grid -->
+            <div id="grid_container"></div>
 
-    
+        
+            <div id="menu_container2">
+
+                <!-- Create eraser button. Icon to be an eraser -->
+                <button class="btn" id="eraser_btn">
+                    <img src="./img/eraser.png" alt="A cartoon style image of a peach coloured eraser" width="50vw" height="50vh">
+                    <h3>erase</h3>
+                </button>
+
+                <!-- Create clear canvas button. Icon to be cleaning supplies -->     
+                <button class="btn" id="clear_btn">
+                    <img src="./img/cleaning_supplies.png" alt="A cartoon style image of a bucket with cleaning supplies in it" width="50vw" height="50vh">
+                    <h3>clear</h3>
+                </button>
+
+                <!-- Create size slider. Icons to be paint brushes -->
+                <div class="sliders" id="size_container">
+                    <div class="slider_container">
+                        <img id="brush1" src="img/brush.png" width="15px">
+                        <input type="range" min="4" max="100" value="50" id="sizeRange" class="slider">
+                        <img id="brush2" src="img/brush.png" width="30px">
+                    </div>
+                    <p class="slider_text" id="size_text"></p>
+                </div>
+                    
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+
+    </div>
+
     <script src="index.js"></script>
 
 </body>

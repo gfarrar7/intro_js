@@ -6,53 +6,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
     
-    <div class="container" id="calculator-container">
+    <div class="container" id="calculator-container" width="400px" height="600px">
         <div class="container" id="calculator-content">
             <div class="container" id="screen">
                 <div id="output"></div>
                 <div id="input"></div>
             </div>
             <div class="container" id="btns-container">
-                <div class="btns" id="top-btns">
-                    <btn class="btn" id="clear-btn">AC</btn>
-                    <btn class="btn" id="delete-btn">C</btn>
-                    <btn class="btn" id="power">xⁿ</btn>
-                    <btn class="btn" id="plus-minus">+/-</btn>
-                </div>
-                <div class="btns" id="bottom-btns">
-                    <div id="right-btns">
-                        <div id="row1">
-                            <btn class="btn" id="7">7</btn>
-                            <btn class="btn" id="8">8</btn>
-                            <btn class="btn" id="9">9</btn>
-                        </div>
-                        <div id="row2">
-                            <btn class="btn" id="4">4</btn>
-                            <btn class="btn" id="5">5</btn>
-                            <btn class="btn" id="6">6</btn>
-                        </div>
-                        <div id="row3">
-                            <btn class="btn" id="1">1</btn>
-                            <btn class="btn" id="2">2</btn>
-                            <btn class="btn" id="3">3</btn>
-                        </div>
-                        <div id="row4">
-                            <btn class="btn" id="0">0</btn>
-                            <btn class="btn" id="decimal">.</btn>
-                            <btn class="btn" id="equals">=</btn>
-                        </div>
+                <div class="btns">
+                    <div id="row1">
+                        <button class="btn" id="clear-btn">AC</button>
+                        <button class="btn" id="delete-btn">C</button>
+                        <button class="btn" id="power">xⁿ</button>
+                        <button class="btn" id="percent">٪</button>
                     </div>
-                    <div id="left-btns">
-                        <btn class="btn" id="percent">٪</btn>
-                        <btn class="btn" id="times">×</btn>
-                        <btn class="btn" id="divy">÷</btn>
-                        <btn class="btn" id="minus">−</btn>
-                        <btn class="btn" id="plus">+</btn>
+                    <div id="row2">
+                        <button class="btn" id="7">7</button>
+                        <button class="btn" id="8">8</button>
+                        <button class="btn" id="9">9</button>
+                        <button class="btn right-btn" id="times">×</button>
+                    </div>
+                    <div id="row3">
+                        <button class="btn" id="4">4</button>
+                        <button class="btn" id="5">5</button>
+                        <button class="btn" id="6">6</button>
+                        <button class="btn right-btn"  id="divy">÷</button>
+                    </div>
+                    <div id="row4">
+                        <button class="btn" id="1">1</button>
+                        <button class="btn" id="2">2</button>
+                        <button class="btn" id="3">3</button>
+                        <button class="btn right-btn" id="minus">−</button>
+                    </div>
+                    <div id="row5">
+                        <button class="btn bottom-btn" id="0">0</button>
+                        <button class="btn bottom-btn" id="decimal">.</button>
+                        <button class="btn bottom-btn" id="equals">=</button>
+                        <button class="btn right-btn" id="plus">+</button>
                     </div>
                 </div>
             </div>

@@ -1,38 +1,46 @@
 AESTHETIC:
 
-Create a container for the calculator 
+Create a container for the calculator [x]
 
-    Create a container for the input and buttons
+    Create a container for the input and buttons [x]
 
-        Create an element for the result/input
+        Create an element for the result/input [x]
         
-        Create container for the keys
+        Create container for the keys [x]
 
-            Create elements for the number keys
+            Create elements for the number keys [x]
 
-            Create elements for the operator keys ()
+            Create elements for the operator keys [x]
 
-            Create elements for the equals, backspace and clear keys
+            Create elements for the equals, backspace and clear keys [x]
 
 
 FUNCTIONALITY:
 
-Create a function for plus
+Create a function for decimal point [x]
 
-Create a function for minus
+Create a function for equals [x]
 
-Create a function for multiply
+Create a function for add [x]
 
-Create a function for divide
+Create a function for subtract [x]
 
-Create a function for power to
+Create a function for divide [x]
 
-Create a function for percentage
+Create a function for multiply [x]
 
-Create a function for decimal point
+Create a function for percentage [x]
 
-Create a function for plu/minu number
+Create a function for power to [x]
 
-Create a function called 'operate' that takes the 2 numbers and operator entered and calls one of the above functions
+Create a function for backspace [x]
 
-Create a function that enters a key's value in the input when button is pressed
+Create a function for clear [x]
+
+Create a function called 'operate' that takes the 2 numbers and operator entered and calls one of the above functions [x]
+
+Create a function that enters a key's value in the input when button is pressed [x]
+
+Create a function that registers keyboard strokes as the same as button clicks in the output []
+
+
